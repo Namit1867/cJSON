@@ -46,25 +46,3 @@ static int suite_teardown(int num_failures)
 {
 a_custom_teardown();
 }
-
-/*=======Test Reset Option=====*/
-void resetTest(void);
-void resetTest(void)
-{
-  tearDown();
-  setUp();
-}
-
-
-/*=======MAIN=====*/
-int main(void)
-{
-  suite_setup();
-  UnityBegin("testdata/testsample.c");
-  RUN_TEST(test_TheFirstThingToTest, 21);
-  RUN_TEST(test_TheSecondThingToTest, 43);
-  RUN_TEST(test_TheThirdThingToTest, 53);
-  RUN_TEST(test_TheFourthThingToTest, 58);
-
-  return suite_teardown(UnityEnd());
-}

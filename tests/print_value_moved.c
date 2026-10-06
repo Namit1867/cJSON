@@ -102,6 +102,3 @@ int CJSON_CDECL main(void)
     RUN_TEST(print_value_should_print_string);
     RUN_TEST(print_value_should_print_array);
     RUN_TEST(print_value_should_print_object);
-
-    return UNITY_END();
-}
